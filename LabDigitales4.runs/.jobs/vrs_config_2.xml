@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_1" LaunchDir="C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

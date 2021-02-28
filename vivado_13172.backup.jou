@@ -1,0 +1,128 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Feb 27 17:59:37 2021
+# Process ID: 13172
+# Current directory: C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11796 C:\Users\A01039835\Desktop\LabDigitales4-wTB-Alberto\LabDigitales4-wTB\LabDigitales4-wTB\Practica4.xpr
+# Log file: C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/vivado.log
+# Journal file: C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/Practica4.xpr
+update_compile_order -fileset sources_1
+save_project_as LabDigitales4 C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB -force
+synth_design -rtl -name rtl_1
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top BitAddSubstract8 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+place_ports {A[7]} R13
+place_ports {A[6]} U18
+place_ports {A[5]} T18
+place_ports {A[4]} R17
+place_ports {A[3]} R15
+place_ports {A[2]} M13
+place_ports {A[1]} L16
+place_ports {A[0]} J15
+place_ports {B[7]} V10
+place_ports {B[6]} U11
+place_ports {B[5]} U12
+place_ports {B[4]} H6
+place_ports {B[3]} T13
+place_ports {B[2]} R16
+place_ports {B[1]} U8
+place_ports {B[0]} T8
+place_ports {res[7]} U16
+place_ports {res[6]} U17
+place_ports {res[5]} V17
+set_property package_pin "" [get_ports [list  {res[4]}]]
+place_ports {res[4]} R18
+place_ports {res[3]} N14
+place_ports {res[2]} J13
+place_ports {res[1]} K15
+place_ports {res[0]} H17
+place_ports c_ov V12
+place_ports carry_out V11
+place_ports restar P17
+file mkdir C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.srcs/constrs_1/new
+close [ open C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.srcs/constrs_1/new/Practica4.xdc w ]
+add_files -fileset constrs_1 C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.srcs/constrs_1/new/Practica4.xdc
+set_property target_constrs_file C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.srcs/constrs_1/new/Practica4.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {A[7]} {A[6]} {A[5]} {A[4]} {A[3]} {A[2]} {A[1]} {A[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {B[7]} {B[6]} {B[5]} {B[4]} {B[3]} {B[2]} {B[1]} {B[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {res[7]} {res[6]} {res[5]} {res[4]} {res[3]} {res[2]} {res[1]} {res[0]}]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+opt_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list c_ov]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list carry_out]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list restar]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.runs/impl_1/BitAddSubstract8.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.runs/impl_1/BitAddSubstract8.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.runs/impl_1/BitAddSubstract8.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB/LabDigitales4.runs/impl_1/BitAddSubstract8.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+close_design
+save_project_as project_1 C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB -force
+save_project_as project_2 C:/Users/A01039835/Desktop/LabDigitales4-wTB-Alberto/LabDigitales4-wTB/LabDigitales4-wTB -force

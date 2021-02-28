@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 25 12:49:42 2021
+# Process ID: 10772
+# Current directory: C:/Users/CPU06/Desktop/LabDigitales4-master
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2400 C:\Users\CPU06\Desktop\LabDigitales4-master\Practica4.xpr
+# Log file: C:/Users/CPU06/Desktop/LabDigitales4-master/vivado.log
+# Journal file: C:/Users/CPU06/Desktop/LabDigitales4-master\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/CPU06/Desktop/LabDigitales4-master/Practica4.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/CPU06/Desktop/LabDigitales4-master/Practica4.srcs/sources_1/new/tb_BitAddSubstract8.vhd w ]
+add_files C:/Users/CPU06/Desktop/LabDigitales4-master/Practica4.srcs/sources_1/new/tb_BitAddSubstract8.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+source BitAddSubstract8.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_BitAddSubstract8 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source BitAddSubstract8.tcl
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+run all
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_BitAddSubstract8 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source tb_BitAddSubstract8.tcl
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+close_sim
